@@ -1,6 +1,6 @@
 from jumpscale import j
 import gevent
-JSBASE = j.servers.gworld.service_class_get()
+JSBASE = j.servers.digitalme.community.service_class_get()
 
 SCHEMA = """
 llist2 = "" (LS) #L means = list, S=String        
