@@ -7,6 +7,8 @@ community = j.servers.digitalme.community
 
 community.knowledge_learn("recipes")
 
+m = community.coordinator_dna["zos_virtualbox"]
+
 #now knowledge has been loaded
 
 # for i in range(100):
@@ -18,5 +20,8 @@ community.knowledge_learn("recipes")
 # community.start()
 
 
-j.servers.digitalme.community
+
+
+import bpython; bpython.embed(locals(), banner='')
+
 
