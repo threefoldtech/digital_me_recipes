@@ -6,11 +6,13 @@ SCHEMA = """
 name = "" (S)    # name as used in virtualbox sal
 redis_addr = "" (S)  #for the client to connect to
 redis_port = 0 (I)
-epoch_started = 0 (D)
-epoch_stopped = 0 (D)
-description = ""
-state = "new,active,error,halted,deleted" (S)  #needs to become enumeration, so no mistakes can be made, now string
 """
+
+##DEFAULT PROPERTIES (just done here because used as example)
+# epoch_started = 0 (D)
+# epoch_stopped = 0 (D)
+# description = ""
+# state = "new,active,error,halted,deleted" (S)  #needs to become enumeration, so no mistakes can be made, now string
 
 class Service(JSBASE):
 
@@ -21,6 +23,8 @@ class Service(JSBASE):
         #nothing to do, no dependencies
         self.data.state = "init"
         self.save()
+        import bpython; bpython.embed(locals(), banner='virtualbox')
+        s
 
 
     def start(self):
@@ -56,3 +60,4 @@ class Service(JSBASE):
 
     def ok(self):
         pass
+

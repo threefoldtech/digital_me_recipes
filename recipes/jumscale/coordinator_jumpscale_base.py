@@ -1,20 +1,15 @@
 from jumpscale import j
 JSBASE = j.servers.digitalme.community.coordinator_class_get()
 
-SCHEMA = """
-version_min = "9.4"
-state = "new,init,active,error" (S)  #needs to become enumeration, so no mistakes can be made, now string
-"""
+
 
 class Coordinator(JSBASE):
-
-    def __init__(self,community,name,instance):
-        JSBASE.__init__(self,community=community,name=name,instance=instance)
 
     def init(self):
         #TODO, check min version is 9.5 of jumpscale
         self.data.state = "init"
         self.save()
+
 
 
     def start(self):

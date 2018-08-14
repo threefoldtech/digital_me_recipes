@@ -1,13 +1,15 @@
 
 from jumpscale import j
 
-
-
+raise j.exceptions.HaltException("aaa")
 community = j.servers.digitalme.community
 
 community.knowledge_learn("recipes")
 
 m = community.coordinator_dna["zos_virtualbox"]
+
+c = community.coordinator_get()
+
 
 #now knowledge has been loaded
 
