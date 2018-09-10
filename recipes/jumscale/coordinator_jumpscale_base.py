@@ -1,4 +1,4 @@
-from jumpscale import j
+from Jumpscale import j
 JSBASE = j.servers.digitalme.community.coordinator_class_get()
 
 SCHEMA = """
