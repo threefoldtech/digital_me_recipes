@@ -1,13 +1,16 @@
 
 from Jumpscale import j
 
-
-
 community = j.servers.digitalme.community
 
 community.knowledge_learn("recipes")
 
-m = community.coordinator_dna["zos_virtualbox"]
+m = community.service_dna["zos_virtualbox"]
+
+c = community.coordinator_get("node_robot")
+
+s = c.service_get(name="os_ubuntu1804_base",instance="main")
+
 
 #now knowledge has been loaded
 
@@ -17,11 +20,9 @@ m = community.coordinator_dna["zos_virtualbox"]
 # assert True == r2.monitor_running()
 # assert True == r2.running()
 
-# community.start()
+
+community.start()
 
 
-
-
-import bpython; bpython.embed(locals(), banner='')
 
 
