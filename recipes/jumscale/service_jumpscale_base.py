@@ -2,7 +2,7 @@
 from Jumpscale import j
 JSBASE = j.servers.digitalme.community.coordinator_class_get()
 =======
-from jumpscale import j
+from Jumpscale import j
 import gevent
 JSBASE = j.servers.digitalme.community.service_class_get()
 >>>>>>> bf069534af15c75b89aaccdb502b2d53d1d7ed26:recipes/jumscale/service_jumpscale_base.py
