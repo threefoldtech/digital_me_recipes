@@ -46,7 +46,7 @@ class Service(JSBASE):
         print("monitor started")
         counter = 0
         while True:
-            from IPython import embed; embed()
+            j.shell()
             k
             counter += 1
             print("monitor:%s:%s" % (self, counter))
